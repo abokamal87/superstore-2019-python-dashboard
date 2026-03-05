@@ -1,203 +1,152 @@
-# Superstore 2019 Sales Analysis & Dashboard
+# Superstore Performance Dashboard
+
+An interactive **Business Intelligence dashboard** built with **Python and Streamlit** to analyze sales performance for a retail superstore dataset.
+
+The project explores sales trends, profitability, product performance, and discount impact through **Exploratory Data Analysis (EDA)** and an **interactive dashboard**.
+
+---
 
 ## Project Overview
 
-This project analyzes the **Superstore 2019 dataset** using Python in
-order to uncover business insights and build an interactive dashboard.
+This project demonstrates a full data analysis workflow:
 
-The goal of this project is to demonstrate a complete **end‑to‑end data
-analysis workflow**, including:
+1. **Data Understanding**
+2. **Exploratory Data Analysis (EDA)**
+3. **Data Preparation**
+4. **Dashboard Development**
+5. **Business Insights**
 
--   Environment setup
--   Data loading and validation
--   Exploratory Data Analysis (EDA)
--   Feature engineering
--   Business insights extraction
--   Interactive dashboard development using Streamlit
+The dashboard allows users to interactively explore the data using filters and visualize key business metrics.
 
-This project is designed as a **portfolio‑level data analytics project**
-suitable for showcasing on GitHub.
+---
 
-------------------------------------------------------------------------
+## Dashboard Features
 
-# Dataset
+* Interactive filters for:
 
-Dataset: **Sample Superstore 2019**
+  * Year
+  * Region
+  * Category
+  * Segment
 
-Rows: **9,994**\
-Columns: **21**
+* Key Performance Indicators (KPIs):
 
-Main fields include:
+  * Total Sales
+  * Total Profit
+  * Profit Margin
+  * Number of Orders
+  * Number of Customers
+  * Loss-making transactions
 
--   Order ID
--   Order Date
--   Ship Date
--   Customer ID
--   Customer Name
--   Segment
--   City
--   State
--   Region
--   Category
--   Sub‑Category
--   Sales
--   Quantity
--   Discount
--   Profit
+* Visual Analysis:
 
-------------------------------------------------------------------------
+  * Sales & Profit Trend (Monthly)
+  * Sales by Region
+  * Top Products by Sales
+  * Loss-making Products
+  * Discount vs Profit Analysis
 
-# Project Structure
+* Automated Executive Insights
 
-superstore-2019-python-dashboard/
+* Download filtered dataset as CSV
 
-│\
-├── data/\
-│ └── raw/\
-│ └── Sample - Superstore 2019.xlsx
+---
 
-│\
-├── notebooks/\
-│ └── 01_data_understanding.ipynb
+## Project Structure
 
-│\
-├── app.py\
-├── requirements.txt\
-└── README.md
-
-------------------------------------------------------------------------
-
-# Environment Setup
-
-A virtual environment was created to isolate project dependencies.
-
-Create virtual environment:
-
-``` bash
-python -m venv .venv
+```
+superstore-2019-python-dashboard
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── project_progress_report.md
+│
+├── src
+│   ├── data.py
+│   ├── metrics.py
+│   └── charts.py
+│
+├── notebooks
+│   ├── 01_data_understanding.ipynb
+│   └── 02_dashboard_preparation.ipynb
+│
+└── data
+    └── raw
 ```
 
-Activate environment (Windows):
+---
 
-``` bash
-.venv\Scripts\activate
+## Analysis Notebooks
+
+* **01_data_understanding.ipynb**
+  Exploratory Data Analysis and dataset inspection.
+
+* **02_dashboard_preparation.ipynb**
+  Data cleaning and preparation steps used before building the dashboard.
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/abokamal87/superstore-2019-python-dashboard.git
+cd superstore-2019-python-dashboard
 ```
 
-------------------------------------------------------------------------
+Install dependencies:
 
-# Installing Dependencies
-
-Install required libraries:
-
-``` bash
-pip install pandas numpy matplotlib seaborn plotly streamlit openpyxl
+```bash
+pip install -r requirements.txt
 ```
 
-Save installed packages:
+---
 
-``` bash
-pip freeze > requirements.txt
-```
+## Running the Dashboard
 
-------------------------------------------------------------------------
+Start the Streamlit app:
 
-# Running the Dashboard
-
-To run the Streamlit dashboard locally:
-
-``` bash
+```bash
 streamlit run app.py
 ```
 
-The application will run at:
+---
 
-http://localhost:8501
+## Dataset
 
-------------------------------------------------------------------------
+This project uses the **Superstore Sales Dataset**.
 
-# Current Progress
+Place the dataset file in:
 
-Completed steps:
+```
+data/raw/
+```
 
--   Project folder creation
--   Virtual environment setup
--   Python dependency installation
--   Dataset integration
--   Streamlit test dashboard
--   Dataset validation
+Example file name:
 
-Dataset successfully loaded with:
+```
+Sample - Superstore 2019.xlsx
+```
 
--   **9,994 rows**
--   **21 columns**
+Alternatively, the dataset can be uploaded directly through the dashboard interface.
 
-The Streamlit application successfully displays the dataset preview.
+---
 
-------------------------------------------------------------------------
+## Technologies Used
 
-# Next Development Steps
+* Python
+* Pandas
+* Streamlit
+* Plotly
+* Git & GitHub
+* Jupyter Notebook
 
-## 1. Data Understanding
+---
 
--   Data structure analysis
--   Missing values detection
--   Duplicate record detection
--   Data types validation
+## Author
 
-## 2. Exploratory Data Analysis (EDA)
+**Mohamed Kamal**
 
--   Sales analysis
--   Profit analysis
--   Discount impact analysis
--   Category performance
--   Regional performance
-
-## 3. Feature Engineering
-
-New variables will be created such as:
-
--   Year
--   Month
--   Quarter
--   Shipping delay
--   Profit ratio
-
-## 4. Business Insights
-
-Identify:
-
--   Most profitable categories
--   Loss‑making products
--   Discount impact on profitability
--   Top performing customers
-
-## 5. Interactive Dashboard
-
-The final dashboard will include:
-
--   KPI cards
--   Sales trends
--   Category performance charts
--   Region performance charts
--   Profit vs Discount analysis
--   Interactive filters
-
-------------------------------------------------------------------------
-
-# Tools & Technologies
-
-Python\
-Pandas\
-NumPy\
-Matplotlib\
-Seaborn\
-Plotly\
-Streamlit
-
-------------------------------------------------------------------------
-
-# Author
-
-Mohamed Kamal
-
-Data Analytics Portfolio Project
+Data Analyst | Python | SQL | Power BI | Data Visualization
