@@ -1,166 +1,173 @@
-# Superstore Performance Dashboard
+# Superstore Sales Analytics Dashboard
 
-An interactive **Business Intelligence dashboard** built with **Python and Streamlit** to analyze sales performance for a retail superstore dataset.
-
-The project explores sales trends, profitability, product performance, and discount impact through **Exploratory Data Analysis (EDA)** and an **interactive dashboard**.
+An **end-to-end Data Analytics project** that analyzes retail sales data, builds interactive dashboards, applies machine learning for profit prediction, and performs sales forecasting using time series models.
 
 ---
 
-## Project Overview
+# Live Dashboard
 
-This project demonstrates a full data analysis workflow:
+**Interactive Streamlit App**
 
-1. **Data Understanding**
-2. **Exploratory Data Analysis (EDA)**
-3. **Data Preparation**
-4. **Dashboard Development**
-5. **Business Insights**
-
-The dashboard allows users to interactively explore the data using filters and visualize key business metrics.
+https://superstore-2019-python-dashboard-zxena2enreadmjjm5szriw.streamlit.app/
 
 ---
 
-## Dashboard Features
+# Project Overview
 
-* Interactive filters for:
+This project analyzes the **Superstore retail dataset** to extract business insights, build interactive dashboards, and apply predictive analytics techniques.
 
-  * Year
-  * Region
-  * Category
-  * Segment
+The solution includes:
 
-* Key Performance Indicators (KPIs):
-
-  * Total Sales
-  * Total Profit
-  * Profit Margin
-  * Number of Orders
-  * Number of Customers
-  * Loss-making transactions
-
-* Visual Analysis:
-
-  * Sales & Profit Trend (Monthly)
-  * Sales by Region
-  * Top Products by Sales
-  * Loss-making Products
-  * Discount vs Profit Analysis
-
-* Automated Executive Insights
-
-* Download filtered dataset as CSV
+* Data exploration and preparation
+* Interactive dashboard using Streamlit
+* Machine learning model to predict profitable vs loss transactions
+* Time series forecasting to estimate future sales
+* Deployment to Streamlit Cloud
 
 ---
 
-## Project Structure
+# Key Features
+
+### 1. Sales Performance Dashboard
+
+Interactive dashboard displaying:
+
+* Total Sales
+* Total Profit
+* Profit Margin
+* Number of Orders
+* Customer count
+* Loss-making transactions
+
+Includes multiple analysis tabs:
+
+* Overview
+* Category Analysis
+* Product Analysis
+* Discount & Risk Analysis
+
+---
+
+### 2. Profit Prediction (Machine Learning)
+
+A classification model predicts whether an order will be:
+
+* Profitable
+* Loss-making
+
+Input features include:
+
+* Sales
+* Discount
+* Quantity
+* Category
+* Sub-Category
+* Region
+* Segment
+* Ship Mode
+
+The model returns:
+
+* Profit probability
+* Loss probability
+* Risk indicator
+
+---
+
+### 3. Sales Forecasting
+
+A **Prophet time-series model** predicts future monthly sales.
+
+Forecast section includes:
+
+* Expected sales next month
+* Expected sales next quarter
+* Forecast growth rate
+* Forecast chart with confidence interval
+* Next 6 months forecast table
+
+---
+
+# Project Structure
 
 ```
 superstore-2019-python-dashboard
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── project_progress_report.md
-│
-├── src
-│   ├── data.py
-│   ├── metrics.py
-│   └── charts.py
-│
-├── notebooks
-│   ├── 01_data_understanding.ipynb
-│   └── 02_dashboard_preparation.ipynb
-│
-└── data
-    └── raw
+
+assets/                 Dashboard screenshots
+data/
+    raw/                Original dataset
+    forecast_sales.csv  Forecast output
+
+models/
+    profit_prediction_model.pkl
+
+notebooks/
+    01_data_understanding.ipynb
+    02_dashboard_preparation.ipynb
+    03_profit_prediction.ipynb
+    04_sales_forecasting.ipynb
+
+src/
+    data.py
+    metrics.py
+    charts.py
+
+app.py
+requirements.txt
+README.md
 ```
 
 ---
 
-## Analysis Notebooks
+# Technologies Used
 
-* **01_data_understanding.ipynb**
-  Exploratory Data Analysis and dataset inspection.
-
-* **02_dashboard_preparation.ipynb**
-  Data cleaning and preparation steps used before building the dashboard.
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Prophet
+* Plotly
+* Matplotlib
+* Streamlit
 
 ---
 
-## Dashboard Preview
+# Business Insights
 
-### Overview
-![Overview](assets/dashboard_overview.png)
+Key insights discovered during analysis:
 
-### Category Analysis
-![Category](assets/category_sales_profit.png)
+* Technology category generates the highest profit
+* Furniture category has the highest risk of loss
+* High discounts strongly correlate with negative profit
+* Sales show a consistent upward trend over the years
+* Peak sales typically occur during the fourth quarter
 
-### Products Analysis
-![Products](assets/products_analysis.png)
+---
 
-### Discount & Risk
-![Discount](assets/discount_risk_analysis.png)
-
-## Installation
+# How to Run the Project
 
 Clone the repository:
 
-```bash
-git clone https://github.com/abokamal87/superstore-2019-python-dashboard.git
-cd superstore-2019-python-dashboard
+```
+git clone https://github.com/your-repo-link
 ```
 
 Install dependencies:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
----
+Run the dashboard:
 
-## Running the Dashboard
-
-Start the Streamlit app:
-
-```bash
+```
 streamlit run app.py
 ```
 
 ---
 
-## Dataset
+# Author
 
-This project uses the **Superstore Sales Dataset**.
+Mohamed Kamal
 
-Place the dataset file in:
-
-```
-data/raw/
-```
-
-Example file name:
-
-```
-Sample - Superstore 2019.xlsx
-```
-
-Alternatively, the dataset can be uploaded directly through the dashboard interface.
-
----
-
-## Technologies Used
-
-* Python
-* Pandas
-* Streamlit
-* Plotly
-* Git & GitHub
-* Jupyter Notebook
-
----
-
-## Author
-
-**Mohamed Kamal**
-
-Data Analyst | Python | SQL | Power BI | Data Visualization
+Data Analyst | Python | Machine Learning | Data Visualization
