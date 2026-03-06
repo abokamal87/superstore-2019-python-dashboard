@@ -21,3 +21,6 @@ data/processed/
 # data files
 data/raw/*.xlsx
 data/raw/*.xls
+
+# allow sample dataset
+!data/raw/Sample - Superstore 2019.xlsx
