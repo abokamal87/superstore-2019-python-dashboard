@@ -13,22 +13,6 @@ from src.charts import (
     top_products,
 )
 
-st.sidebar.header("Data Source")
-
-uploaded_file = st.sidebar.file_uploader(
-    "Upload Superstore dataset (.xlsx)",
-    type=["xlsx"],
-    key="superstore_uploader"
-)
-
-DATA_PATH = "data/raw/Sample - Superstore 2019.xlsx"
-
-# Status message
-if uploaded_file is not None:
-    st.sidebar.success("Loaded uploaded dataset")
-else:
-    st.sidebar.success("Loaded local dataset")
-
 def color_profit(val):
     if val < 0:
         return "color: red"
@@ -37,27 +21,11 @@ def color_profit(val):
 
 st.set_page_config(page_title="Superstore Dashboard", layout="wide")
 
-st.sidebar.header("Data Source")
-
-
-
-DATA_PATH = "data/raw/Sample - Superstore 2019.xlsx"
-
-
 @st.cache_data
-def get_data(source):
-    return load_data(source)
+def get_data():
+    return load_data("data/raw/Sample - Superstore 2019.xlsx")
 
-
-if uploaded_file is not None:
-    df = get_data(uploaded_file)
-    st.sidebar.success("Loaded uploaded dataset")
-elif os.path.exists(DATA_PATH):
-    df = get_data(DATA_PATH)
-    st.sidebar.success("Loaded local dataset")
-else:
-    st.error("Dataset not found. Please upload the Excel file.")
-    st.stop()
+df = get_data()
 
 st.title("Superstore Performance Dashboard")
 

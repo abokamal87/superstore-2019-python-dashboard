@@ -87,6 +87,20 @@ superstore-2019-python-dashboard
 
 ---
 
+## Dashboard Preview
+
+### Overview
+![Overview](assets/dashboard_overview.png)
+
+### Category Analysis
+![Category](assets/category_sales_profit.png)
+
+### Products Analysis
+![Products](assets/products_analysis.png)
+
+### Discount & Risk
+![Discount](assets/discount_risk_analysis.png)
+
 ## Installation
 
 Clone the repository:
